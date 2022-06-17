@@ -1,0 +1,50 @@
+package com.company;
+
+import java.util.LinkedList;
+import java.util.List;
+
+class Players {
+    public static void main(String[] args) {
+        Player player = new Player("Bob");
+        System.out.println(player.getName());
+        Player player2 = new Player("Peter");
+        System.out.println(player2.getName());
+        Player player3 = new Player("Sam");
+        System.out.println(player3.getName());
+    }
+
+
+}
+
+class Player {
+    private String name;
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Game {
+public byte getSingleGame() {
+        return singleGame;
+        }
+
+private final byte singleGame;
+public Game(byte singleGame){
+        this.singleGame=singleGame;
+        }
+}
+
+class GameSummer {
+    private final LinkedList<Game> game;
+
+    public GameSummer(byte singleGame) {
+        game = new LinkedList<>();
+        game.add(new Game((byte)1));
+        game.add(new Game((byte)2));
+        game.add(new Game((byte)3));
+    }
+}
